@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Operaţii aritmetice </title>
+    
+</head>
+<body>
+    <div>
+        <h2>Program pentru operaţii aritmetice<br /> de bază</h2><hr />
+        <h3> Introduceţi un număr</h3>
+        <input type="number" placeholder="Introduceţi un număr" id="num1" />
+        <br />
+        <h3> Introduceţi un alt număr</h3>
+        <input type="number" placeholder="Introduceţi un număr" id="num2"/>
+        <br />
+        <h3> Selectaţi operaţia dorită</h3>
+        <button id="add">+</button>
+        <button id="sub">-</button>
+        <button id="mul">*</button>
+        <button id="div">/</button><br />
+        <br>
+        <h3>Rezultatul</h3>
+        <input type="number" readonly id="result" />
+    </div>
+    <script type="text/javascript">
+        var n1 = document.getElementById("num1");
+        var n2 = document.getElementById("num2");
+        var res = document.getElementById("result");
+
+        document.getElementById("add").addEventListener("click", function() {
+            res.value= parseInt(n1.value) + parseInt(n2.value);
+        });
+        document.getElementById("sub").addEventListener("click", function() {
+            res.value= parseInt(n1.value) - parseInt(n2.value);
+        });
+        document.getElementById("mul").addEventListener("click", function() {
+            res.value= parseInt(n1.value) * parseInt(n2.value);
+        });
+        document.getElementById("div").addEventListener("click", function() {
+            res.value= parseInt(n1.value) / parseInt(n2.value);
+        });
+
+        </script>
+    
+</body>
+</html>
